@@ -7,7 +7,7 @@ import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
 import { earningData, medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
-import product9 from '../data/product9.jpg';
+import product1 from '../data/product1.jpg';
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -25,7 +25,7 @@ const Ecommerce = () => {
           <div className="flex justify-between items-center">
             <div>
               <p className="font-bold text-gray-400">Earnings</p>
-              <p className="text-2xl">$63,448.78</p>
+              <p className="text-2xl">$69,448.78</p>
             </div>
             <button
               type="button"
@@ -103,7 +103,7 @@ const Ecommerce = () => {
               </div>
 
               <div className="mt-5">
-                <SparkLine currentColor={currentColor} id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData} color={currentColor} />
+              <SparkLine currentColor={currentColor} id="line-sparkLine" type="Line" height="80px" width="250px" data={SparklineAreaData} color={currentColor} />
               </div>
               <div className="mt-10">
                 <Button
@@ -121,19 +121,19 @@ const Ecommerce = () => {
         </div>
         <div>
           <div
-            className=" rounded-2xl md:w-400 p-4 m-3"
+            className=" rounded-2xl md:w-400 p-8 m-3"
             style={{ backgroundColor: currentColor }}
           >
             <div className="flex justify-between items-center ">
               <p className="font-semibold text-white text-2xl">Earnings</p>
 
               <div>
-                <p className="text-2xl text-white font-semibold mt-8">$63,448.78</p>
+                <p className="text-2xl text-white font-semibold mt-8">$12,448.20</p>
                 <p className="text-gray-200">Monthly revenue</p>
               </div>
             </div>
 
-            <div className="mt-4">
+            <div className="mt-5">
               <SparkLine currentColor={currentColor} id="column-sparkLine" height="100px" type="Column" data={SparklineAreaData} width="320" color="rgb(242, 252, 253)" />
             </div>
           </div>
@@ -241,7 +241,7 @@ const Ecommerce = () => {
         </div>
         <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
-            <p className="text-xl font-semibold">MedicalPro Branding</p>
+            <p className="text-xl font-semibold">HealthKit Branding</p>
             <button type="button" className="text-xl font-semibold text-gray-400">
               <IoIosMore />
             </button>
@@ -296,7 +296,7 @@ const Ecommerce = () => {
         </div>
         <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
-            <p className="text-xl font-semibold">Daily Activities</p>
+            <p className="text-xl font-semibold">News of the Month</p>
             <button type="button" className="text-xl font-semibold text-gray-500">
               <IoIosMore />
             </button>
@@ -304,15 +304,15 @@ const Ecommerce = () => {
           <div className="mt-10">
             <img
               className="md:w-96 h-50 "
-              src={product9}
+              src={product1}
               alt=""
             />
             <div className="mt-8">
-              <p className="font-semibold text-lg">React 18 coming soon!</p>
-              <p className="text-gray-400 ">By Johnathan Doe</p>
+              <p className="font-semibold text-lg">Extra Bass Best-seller Headphones</p>
+              <p className="text-gray-400 ">By Prapti Jaduvanshi</p>
               <p className="mt-8 text-sm text-gray-400">
-                This will be the small description for the news you have shown
-                here. There could be some great info.
+              The world is full of incredible music. Music is often called food for the soul.
+              Amplify brand reach and awareness with custom promotional headphones.
               </p>
               <div className="mt-3">
                 <Button

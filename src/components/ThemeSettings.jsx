@@ -37,7 +37,6 @@ const ThemeSettings = () => {
               onChange={setMode}
               checked={currentMode === 'Light'}
             />
-            {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
             <label htmlFor="light" className="ml-2 text-md cursor-pointer">
               Light
             </label>

@@ -10,7 +10,7 @@ const Bar = () => {
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <ChartsHeader category="Bar" title="Olympic Medal Counts - RIO" />
+      <ChartsHeader category="Bar Graph" title="Most Sold Metal in Different Countries" />
       <div className=" w-full">
         <ChartComponent
           id="charts"
@@ -23,7 +23,6 @@ const Bar = () => {
         >
           <Inject services={[ColumnSeries, Legend, Tooltip, Category, DataLabel]} />
           <SeriesCollectionDirective>
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             {barCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
           </SeriesCollectionDirective>
         </ChartComponent>

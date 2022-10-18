@@ -10,7 +10,7 @@ const Area = () => {
 
   return (
     <div className="m-4 md:m-10 mt-24 p-10 bg-white dark:bg-secondary-dark-bg rounded-3xl">
-      <ChartsHeader category="Area" title="Inflation Rate in percentage" />
+      <ChartsHeader category="Area Chart" title="Profit Made by Retails in Different Countries" />
       <div className="w-full">
         <ChartComponent
           id="charts"
@@ -22,7 +22,6 @@ const Area = () => {
         >
           <Inject services={[SplineAreaSeries, DateTime, Legend]} />
           <SeriesCollectionDirective>
-            {/* eslint-disable-next-line react/jsx-props-no-spreading */}
             {areaCustomSeries.map((item, index) => <SeriesDirective key={index} {...item} />)}
           </SeriesCollectionDirective>
         </ChartComponent>
