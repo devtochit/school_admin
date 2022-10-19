@@ -1,9 +1,6 @@
-# Rekcart
+# 
 
-![alt text](https://github.com/praptijaduvanshi/Rekcart/blob/main/Screenshots/Screenshot%20(42).png)
-![alt text](https://github.com/praptijaduvanshi/Rekcart/blob/main/Screenshots/Screenshot%20(43).png)
-![alt text](https://github.com/praptijaduvanshi/Rekcart/blob/main/Screenshots/Screenshot%20(44).png)
-![alt text](https://github.com/praptijaduvanshi/Rekcart/blob/main/Screenshots/Screenshot%20(46).png)
+
 
 
 # Getting Started with Create React App
