@@ -15,7 +15,7 @@ const DropDown = ({ currentMode }) => (
   </div>
 );
 
-const Ecommerce = () => {
+const Home = () => {
   const { currentColor, currentMode } = useStateContext();
 
   return (
@@ -24,15 +24,15 @@ const Ecommerce = () => {
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg h-44 rounded-xl w-full lg:w-80 p-8 pt-9 m-3 bg-hero-pattern bg-no-repeat bg-cover bg-center">
           <div className="flex justify-between items-center">
             <div>
-              <p className="font-bold text-gray-400">Earnings</p>
-              <p className="text-2xl">$69,448.78</p>
+              <p className="font-bold text-gray-400">students</p>
+              <p className="text-2xl">69,448.78</p>
             </div>
             <button
               type="button"
               style={{ backgroundColor: currentColor }}
               className="text-2xl opacity-0.9 text-white hover:drop-shadow-xl rounded-full  p-4"
             >
-              <BsCurrencyDollar />
+              {/* <BsCurrencyDollar /> */}
             </button>
           </div>
           <div className="mt-6">
@@ -69,7 +69,7 @@ const Ecommerce = () => {
       <div className="flex gap-10 flex-wrap justify-center">
         <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg m-3 p-4 rounded-2xl md:w-780  ">
           <div className="flex justify-between">
-            <p className="font-semibold text-xl">Revenue Updates</p>
+            <p className="font-semibold text-xl">students Revenue Updates</p>
             <div className="flex items-center gap-4">
               <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl">
                 <span>
@@ -294,6 +294,7 @@ const Ecommerce = () => {
             <p className="text-gray-400 text-sm">36 Recent Transactions</p>
           </div>
         </div>
+
         <div className="w-400 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl p-6 m-3">
           <div className="flex justify-between">
             <p className="text-xl font-semibold">News of the Month</p>
@@ -301,33 +302,34 @@ const Ecommerce = () => {
               <IoIosMore />
             </button>
           </div>
-          <div className="mt-10">
-            <img
-              className="md:w-96 h-50 "
-              src={product1}
-              alt=""
-            />
-            <div className="mt-8">
-              <p className="font-semibold text-lg">Extra Bass Best-seller Headphones</p>
-              <p className="text-gray-400 ">By Prapti Jaduvanshi</p>
-              <p className="mt-8 text-sm text-gray-400">
-              The world is full of incredible music. Music is often called food for the soul.
-              Amplify brand reach and awareness with custom promotional headphones.
-              </p>
-              <div className="mt-3">
-                <Button
-                  color="white"
-                  bgColor={currentColor}
-                  text="Read More"
-                  borderRadius="10px"
-                />
-              </div>
-            </div>
-          </div>
+          {/* <div className="mt-10"> */}
+            {/* <img */}
+              // className="md:w-96 h-50 "
+              // src={product1}
+              // alt=""
+            //
+            {/* <div className="mt-8"> */}
+              {/* <p className="font-semibold text-lg">Extra Bass Best-seller Headphones</p> */}
+              {/* <p className="text-gray-400 ">By Prapti Jaduvanshi</p> */}
+              {/* <p className="mt-8 text-sm text-gray-400"> */}
+              {/* The world is full of incredible music. Music is often called food for the soul. */}
+              {/* Amplify brand reach and awareness with custom promotional headphones. */}
+              {/* </p> */}
+              {/* <div className="mt-3"> */}
+                {/* <Button */}
+                  // color="white"
+                  // bgColor={currentColor}
+                  // text="Read More"
+                  // borderRadius="10px"
+                //
+              {/* </div> */}
+            {/* </div> */}
+          {/* </div> */}
         </div>
+
       </div>
     </div>
   );
 };
 
-export default Ecommerce;
+export default Home;

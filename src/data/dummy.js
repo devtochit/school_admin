@@ -454,15 +454,21 @@ export const links = [
       {
         name: 'parent',
         icon: <IoMdContacts />,
-      },
-      {
-        name: 'School',
-        icon: <IoMdContacts />,
-      },
-      {
-        name: 'Teacher',
+      },   {
+        name: 'teacher',
+        icon: <RiContactsLine />,
+      },   {
+        name: 'student',
         icon: <RiContactsLine />,
       },
+      {
+        name: 'school',
+        icon: <IoMdContacts />,
+      },
+
+
+
+
     ],
   },
   {
@@ -480,51 +486,24 @@ export const links = [
         name: 'editor',
         icon: <FiEdit />,
       },
-      // {
-        // name: 'color-picker',
-        // icon: <BiColorFill />,
-      // },
     ],
   },
 
-  // {
-    // title: 'Charts',
-    // links: [
-      // {
-        // name: 'line',
-        // icon: <AiOutlineStock />,
-      // },
-      // {
-        // name: 'area',
-        // icon: <AiOutlineAreaChart />,
-      // },
+  {
+    title: 'Progress',
+    links: [
 
-      // {
-        // name: 'bar',
-        // icon: <AiOutlineBarChart />,
-      // },
-      // {
-        // name: 'pie',
-        // icon: <FiPieChart />,
-      // },
-      // {
-        // name: 'financial',
-        // icon: <RiStockLine />,
-      // },
-      // {
-        // name: 'color-mapping',
-        // icon: <BsBarChart />,
-      // },
-      // {
-        // name: 'pyramid',
-        // icon: <GiLouvrePyramid />,
-      // },
-      // {
-        // name: 'stacked',
-        // icon: <AiOutlineBarChart />,
-      // },
-    // ],
-  // },
+
+      {
+        name: 'bar',
+        icon: <AiOutlineBarChart />,
+      },
+      {
+        name: 'pie',
+        icon: <FiPieChart />,
+      },
+    ],
+  },
 ];
 
 export const cartData = [
