@@ -32,7 +32,7 @@ export default function Home() {
     <section className="home">
       <div className=" mb-4 ">
         <h1 className="text-2xl md:text-3xl dark:text-white text-black font-bold">
-          Good Evening, Admni.
+          Good Evening, Admin.
         </h1>
         <p className="text-gray-500 mt-3">
           Glad to have you back, heres an overview of your operation today
