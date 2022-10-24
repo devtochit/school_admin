@@ -1,0 +1,35 @@
+.table__tab {
+  padding: 20px 30px;
+  color: rgba(155, 163, 160, 1);
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+}
+
+.table__tab__active {
+  color: rgba(56, 108, 226, 1);
+  border-bottom: 5px solid rgba(56, 108, 226, 1);
+}
+
+.tableTab__content {
+  display: none;
+}
+
+.tableTab__content__active {
+  display: block;
+}
+
+/* table styling */
+.table {
+  border-spacing: 0 30px;
+  border-collapse: none !important;
+}
+
+.table__row td {
+  padding: 30px;
+}
+
+/* modal */
+
+/* .modal {
+  width: 1000px;
+} */
