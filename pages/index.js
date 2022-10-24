@@ -32,7 +32,7 @@ export default function Home() {
     <section className="home">
       <div className=" mb-4 ">
         <h1 className="text-2xl md:text-3xl dark:text-white text-black font-bold">
-          Good Evening, Chioma.
+          Good Evening, Admni.
         </h1>
         <p className="text-gray-500 mt-3">
           Glad to have you back, heres an overview of your operation today
@@ -43,7 +43,7 @@ export default function Home() {
         <Card bg="bg-blue-700" icon={<GoPerson />} />
 
         <Card
-          small="registered transporters"
+          small="Registered Students"
           heading="15.6m"
           joined="3467 onboard today"
           bg="bg-green-400"
@@ -51,7 +51,7 @@ export default function Home() {
         />
 
         <Card
-          small="total shipments"
+          small="Registered Teachers"
           heading="348.9k"
           joined="3467 shipped today"
           bg="bg-pink-500"
