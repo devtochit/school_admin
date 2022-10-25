@@ -1,16 +1,15 @@
 {
-  "name": "logistics__dashboard",
+  "name": "school__dashboard",
   "private": true,
   "scripts": {
     "build:css": "postcss styles/tailwind.css -o public/dist/tailwind.css",
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "build": "next build "
+    "build": "next build"
+    },
 
-    }
 
-  },
   "dependencies": {
     "chart.js": "^3.7.1",
     "next": "12.1.0",
