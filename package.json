@@ -2,6 +2,7 @@
   "name": "logistics__dashboard",
   "private": true,
   "scripts": {
+    "build:css": "postcss styles/tailwind.css -o public/dist/tailwind.css",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
