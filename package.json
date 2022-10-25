@@ -4,9 +4,12 @@
   "scripts": {
     "build:css": "postcss styles/tailwind.css -o public/dist/tailwind.css",
     "dev": "next dev",
-    "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build": "next build "
+
+    }
+
   },
   "dependencies": {
     "chart.js": "^3.7.1",
