@@ -1,26 +1,31 @@
-import '../styles/globals.css';
-import { Layout } from '../components/Layout';
+import { useState } from "react";
+import '../styles/global.css'
+import { CssBaseline, ThemeProvider } from "@mui/material";
+import { ColorModeContext, useMode } from "../theme";
+import Topbar from "../scenes/global/Topbar";
+import Sidebar from "../scenes/global/Sidebar";
 
-import { DataContextProvider } from '../Utils/DataContext';
-import { ThemeProvider } from 'next-themes';
 
 function MyApp({ Component, pageProps }) {
-  React.useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector("#jss-server-side");
-    if (jssStyles) {
-      jssStyles.parentElement.removeChild(jssStyles);
-    }
-  }, []);
+  const [theme, colorMode] = useMode();
+  const [isSidebar, setIsSidebar] = useState(true);
   return (
-    <DataContextProvider>
-      <ThemeProvider enableSystem={true} attribute="class">
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+    <ColorModeContext.Provider value={colorMode}>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className="app">
+          <Sidebar isSidebar={isSidebar} />
+          <main className="content">
+            <Topbar setIsSidebar={setIsSidebar} />
+            <ThemeProvider theme ={theme} >
+           <Component {...pageProps} />
+            </ThemeProvider>
+          </main>
+        </div>
       </ThemeProvider>
-    </DataContextProvider>
+    </ColorModeContext.Provider>
   );
 }
+
 
 export default MyApp;
