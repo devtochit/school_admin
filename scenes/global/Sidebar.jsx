@@ -130,8 +130,8 @@ export default function Sidebar() {
             active={selected}
            style={{
            color: colors.grey[100], }}>
-        <Typography> School </Typography>
-            <Link href='/school' >  </Link>
+        <Typography> Student </Typography>
+            <Link href='/student' >  </Link>
        </MenuItem>
 
 
