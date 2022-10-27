@@ -3,9 +3,9 @@ import { Box, Typography, useTheme } from "@mui/material";
 import Grid from "@mui/material/Grid";
 import styles from './teacher.module.css';
 import Image from 'next/image';
-import circlePics from '../../public/assets/circle.png';
-import buttonPics from '../../public/assets/button.png';
-import dotsPics from '../../public/assets/dots.png';
+import circlePics from '../../circle.png';
+import buttonPics from '../../button.png';
+import dotsPics from '../../dots.png';
 import { tokens } from "../../theme";
 import TeacherButton from "../teacherButton/index";
 import PaginationNumber from "../pagination/index";
@@ -33,15 +33,15 @@ const TeacherPage = () => {
             marginTop="20px"
          >
          <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -63,9 +63,9 @@ const TeacherPage = () => {
            textAlign="center"
            marginTop="10px"
           >
-            Mathematics 
+            Mathematics
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -81,15 +81,15 @@ const TeacherPage = () => {
            marginTop="20px"
          >
           <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -111,9 +111,9 @@ const TeacherPage = () => {
            textAlign="center"
            marginTop="10px"
           >
-           Science 
+           Science
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -129,15 +129,15 @@ const TeacherPage = () => {
            marginTop="20px"
           >
           <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -159,9 +159,9 @@ const TeacherPage = () => {
             textAlign="center"
             marginTop="10px"
            >
-            Art 
+            Art
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -177,15 +177,15 @@ const TeacherPage = () => {
           marginTop="20px"
           >
            <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -209,7 +209,7 @@ const TeacherPage = () => {
           >
             Biology
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -235,15 +235,15 @@ const TeacherPage = () => {
             marginTop="20px"
          >
          <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -267,7 +267,7 @@ const TeacherPage = () => {
           >
             History
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -283,15 +283,15 @@ const TeacherPage = () => {
            marginTop="20px"
          >
           <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -304,7 +304,7 @@ const TeacherPage = () => {
             textAlign="center"
             fontWeight="700"
          >
-          Jack Sally 
+          Jack Sally
          </Typography>
          <Typography
             color={colors.grey[1000]}
@@ -313,9 +313,9 @@ const TeacherPage = () => {
            textAlign="center"
            marginTop="10px"
           >
-           Physics 
+           Physics
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -331,15 +331,15 @@ const TeacherPage = () => {
            marginTop="20px"
           >
           <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -352,7 +352,7 @@ const TeacherPage = () => {
               textAlign="center"
               fontWeight="700"
            >
-            Lula Beatrice 
+            Lula Beatrice
            </Typography>
            <Typography
              color={colors.grey[1000]}
@@ -363,7 +363,7 @@ const TeacherPage = () => {
            >
             Algorithm
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -379,15 +379,15 @@ const TeacherPage = () => {
           marginTop="20px"
           >
            <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -400,7 +400,7 @@ const TeacherPage = () => {
              textAlign="center"
              fontWeight="700"
           >
-            Nella Vita 
+            Nella Vita
           </Typography>
           <Typography
            color={colors.grey[1000]}
@@ -411,7 +411,7 @@ const TeacherPage = () => {
           >
             English
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -438,15 +438,15 @@ const TeacherPage = () => {
             marginTop="20px"
          >
          <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -468,9 +468,9 @@ const TeacherPage = () => {
            textAlign="center"
            marginTop="10px"
           >
-            Programming 
+            Programming
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -486,15 +486,15 @@ const TeacherPage = () => {
            marginTop="20px"
          >
           <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -516,9 +516,9 @@ const TeacherPage = () => {
            textAlign="center"
            marginTop="10px"
           >
-           Science 
+           Science
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -534,15 +534,15 @@ const TeacherPage = () => {
            marginTop="20px"
           >
           <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -564,9 +564,9 @@ const TeacherPage = () => {
             textAlign="center"
             marginTop="10px"
            >
-            Art 
+            Art
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
@@ -582,15 +582,15 @@ const TeacherPage = () => {
           marginTop="20px"
           >
            <Grid container spacing={2}>
-           <Grid item xs={8}>  
-            <Image 
+           <Grid item xs={8}>
+            <Image
               src={circlePics}
               alt="circle image"
               className={styles.image}
            />
           </Grid>
           <Grid item xs={4}>
-            <Image 
+            <Image
               src={dotsPics}
               alt="dots"
               className={styles.dots}
@@ -603,7 +603,7 @@ const TeacherPage = () => {
              textAlign="center"
              fontWeight="700"
           >
-           Indiana Barker 
+           Indiana Barker
           </Typography>
           <Typography
            color={colors.grey[1000]}
@@ -614,7 +614,7 @@ const TeacherPage = () => {
           >
             Biology
           </Typography>
-          <Image 
+          <Image
             src={buttonPics}
             alt="buttons"
             className={styles.icons}
