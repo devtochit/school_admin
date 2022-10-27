@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import TeacherPage from '../scenes/teacher/index';
 
-function teacher() {
-  return (
-    <div>teacher</div>
-  )
+const Teacher = () => {
+    return (
+     <>
+       <TeacherPage />
+     </>
+    );
 }
 
-export default teacher
+export default Teacher;
