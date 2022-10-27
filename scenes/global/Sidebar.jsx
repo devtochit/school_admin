@@ -16,7 +16,9 @@ import TimelineOutlinedIcon from "@mui/icons-material/TimelineOutlined";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import Item from './Item';
-import Link from 'next/link'
+import Link from 'next/link';
+import Image from  'next/image';
+import img from '../../user.png'
 
 export default function Sidebar() {
 
@@ -46,6 +48,7 @@ export default function Sidebar() {
         "& .pro-menu-item.active": {
           color: "#6870fa !important",
         },
+
 
       }}
     >
@@ -78,15 +81,14 @@ export default function Sidebar() {
           </MenuItem>
 
           {!isCollapsed && (
-            <Box mb="25px">
-              <Box display="flex" justifyContent="center" alignItems="center"   >
-                <img
+            <Box mb="10px">
+              <Box display="flex" justifyContent="center" alignItems="center"    >
+                <Image
                   alt="profile-user"
-                  width="100px"
-                  height="90px"
-                  src={`../../public/assets/user.png`}
-                  style={{ cursor: "pointer", borderRadius: "50%" }}
-                />
+                  width={100}
+                  height={80}
+                  src={` https://i.ibb.co/TcKZxqP/brooke-cagle-u-HVRv-Dr7pg-unsplash.jpg`}
+                  style={{ cursor: "pointer", borderRadius: "50%" }} />
               </Box>
               <Box textAlign="center">
                 <Typography
@@ -104,7 +106,10 @@ export default function Sidebar() {
             </Box>
           )}
 
-          <Box paddingLeft={isCollapsed ? undefined : "10%"}>
+          <Box paddingLeft={isCollapsed ? undefined : "10%"}
+          display="flex" flexDirection='column'  justifyContent="cente" columnGap='200'
+
+          >
 
                 <MenuItem
               icon={<HomeOutlinedIcon />}
@@ -113,14 +118,14 @@ export default function Sidebar() {
               style={{
                 color: colors.grey[100], }}>
                     <Typography> Dashboard </Typography>
-               <Link href='/' >  </Link>
+               <Link href='/dashboard' >  </Link>
                </MenuItem>
 
             <Typography
               variant="h6"
               color={colors.grey[300]}
               sx={{ m: "15px 0 5px 20px" }}
-            >m
+            >
                 pages
             </Typography>
 
