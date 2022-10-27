@@ -1,0 +1,18 @@
+.image {
+  width: 120px;
+  height: 120px;
+  margin-left: 80px;
+  margin-top: 15px;
+}
+
+.dots {
+  margin-top: 15px;
+  margin-left: 50px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    margin-top: 10px;
+}

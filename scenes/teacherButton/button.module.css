@@ -1,0 +1,28 @@
+.buttom{
+  justify-content: flex-end;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.moneyButton {
+  background: transparent;
+  width: 207px;
+  height: 48px;
+  padding: 16px 43px;
+  border-width: 1px;
+  color: #4D44B5;
+  text-align: center;
+  border-color: #4D44B5;
+  border-radius: 40px;
+}
+
+.wizardButton {
+    background: #4D44B5;
+    width: 207px;
+    height: 48px;
+    padding: 16px 43px;
+    color: #FFFFFF;
+    text-align: center;
+    box-shadow: 0px 20px 50px rgba(191, 21, 108, 0.05);
+    border-radius: 40px;
+}
