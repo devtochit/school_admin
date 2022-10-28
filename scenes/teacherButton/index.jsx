@@ -30,15 +30,10 @@ const TeacherButton = () => {
      <Stack className={styles.buttom} direction="row" spacing={2}>
       <div>
       <Button className={styles.moneyButton} variant="outlined" endIcon={<ArrowDropDownIcon />}>
-        Newest 
-      </Button>
-      <Button className={styles.wizardButton} variant="contained" onClick={handleOpen} startIcon={<AddIcon />}>
-     <Stack className={styles.buttom} direction="row" margin-left={1} spacing={2}>
-      <Button variant="outlined"  endIcon={<ArrowDropDownIcon />}color='secondary'   >
         Newest
       </Button>
-      <Button  variant="contained" startIcon={<AddIcon />} color='secondary'   >
-        New Teacher
+      <Button className={styles.wizardButton} variant="contained" onClick={handleOpen} startIcon={<AddIcon />}>
+         New Teacher
       </Button>
       <Modal
         open={open}
