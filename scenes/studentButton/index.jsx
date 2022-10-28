@@ -30,7 +30,7 @@ const StudentButton = () => {
      <Stack className={styles.buttom} direction="row" spacing={2}>
       <div>
       <Button className={styles.moneyButton} variant="outlined" endIcon={<ArrowDropDownIcon />}>
-        Newest 
+        Newest
       </Button>
       <Button className={styles.wizardButton} variant="contained" onClick={handleOpen} startIcon={<AddIcon />}>
         New Student
@@ -42,7 +42,7 @@ const StudentButton = () => {
         aria-describedBy="modal-modal-description"
       >
        <Box sx={style}>
-        <FormField />
+        <FormField handleClose={handleClose} />
        </Box>
       </Modal>
       </div>

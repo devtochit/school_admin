@@ -9,7 +9,7 @@ import CustomButton from "../customButton/index";
 
 const label = { inputProps: { 'aria-labels': 'Check-box'}};
 
-const EducationInput = () => {
+const EducationInput = ({ handleClose }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [value, setValue] = useState();
@@ -87,7 +87,7 @@ const EducationInput = () => {
            fontWeight="700"
            marginLeft="20px"
          >
-           Personal Details 
+           Personal Details
          </Typography>
         </Box>
         <Box
@@ -197,7 +197,8 @@ const EducationInput = () => {
             </Grid>
         </form>
         </Box>
-        <CustomButton />
+        <CustomButton
+        handleClose={handleClose} />
       </Box>
      </>
     );

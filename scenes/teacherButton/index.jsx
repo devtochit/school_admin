@@ -42,7 +42,8 @@ const TeacherButton = () => {
         aria-describedBy="modal-modal-description"
       >
        <Box sx={style}>
-        <EducationInput />
+        <EducationInput
+        handleClose={handleClose} />
        </Box>
       </Modal>
       </div>

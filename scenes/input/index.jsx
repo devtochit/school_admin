@@ -9,7 +9,7 @@ import CustomButton from "../customButton/index";
 
 const label = { inputProps: { 'aria-labels': 'Check-box'}};
 
-const FormField = () => {
+const FormField = ({handleClose}) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const [value, setValue] = useState();
@@ -70,7 +70,7 @@ const FormField = () => {
          textAlign="left"
          marginTop="20px"
        >
-        Add New Student 
+        Add New Student
         </Typography>
         <Box
          width="1400px"
@@ -87,7 +87,7 @@ const FormField = () => {
            fontWeight="700"
            marginLeft="20px"
          >
-           Student Details 
+           Student Details
          </Typography>
         </Box>
         <Box
@@ -156,7 +156,7 @@ const FormField = () => {
            fontWeight="700"
            marginLeft="20px"
          >
-           Parent Details 
+           Parent Details
          </Typography>
         </Box>
         <Box
@@ -199,17 +199,17 @@ const FormField = () => {
               <Grid item xs={6} md={4}>
               <Typography className={styles.labelPtsd}>Payment*</Typography>
               <span className={styles.spanText}>Cash</span>
-              <Checkbox 
-                 {...label} 
+              <Checkbox
+                 {...label}
                  defaultChecked
                  className={styles.checkText}
                 />
-                
+
               </Grid>
             </Grid>
         </form>
         </Box>
-        <CustomButton />
+        <CustomButton handleClose={handleClose} />
       </Box>
      </>
     );
