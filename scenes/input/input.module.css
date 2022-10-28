@@ -1,0 +1,98 @@
+.input {
+  width: 400px;
+  height: 48px;
+  border-width: 1px;
+  border-color: #C1BBEB;
+  text-align: left;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.input1 {
+  width: 400px;
+  height: 48px;
+  border-width: 1px;
+  border-color: #C1BBEB;
+  text-align: left;
+  margin-top: 20px;
+  margin-left: 30px;
+  border-radius: 5px;
+}
+
+.input3 {
+  width: 400px;
+  height: 48px;
+  border-width: 1px;
+  border-color: #C1BBEB;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.textarea {
+  width: 400px;
+  height: 170px;
+  border-width: 1px;
+  border-color: #C1BBEB;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.labelText1{
+  color: #303972;
+  font-size: 15px;
+  margin-left: 30px;
+}
+
+.labelText {
+  color: #303972;
+  font-size: 15px;
+}
+
+.labelText0 {
+  color: #303972;
+  font-size: 15px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.labelText2 {
+  color: #303972;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.labelText3 {
+  color: #303972;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.labelPtsd {
+  color: #303972;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.labelText4 {
+  color: #303972;
+  font-size: 15px;
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.spanText {
+  color: #000;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+.checkText {
+  color: #000;
+}
+
+
+
