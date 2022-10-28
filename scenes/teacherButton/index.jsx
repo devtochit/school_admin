@@ -4,10 +4,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import AddIcon from '@mui/icons-material/Add';
 import styles from './button.module.css';
-import { Box, Typography } from "@mui/material";
+import { Box, Typography ,useTheme} from "@mui/material";
 import Stack from "@mui/material/Stack";
 import Modal from "@mui/material/Modal";
 import EducationInput from '../education/index';
+import { tokens } from "../../theme";
+
 
 const style = {
   position: 'absolute',
@@ -23,16 +25,40 @@ const style = {
 };
 
 const TeacherButton = () => {
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false)
     return (
      <Stack className={styles.buttom} direction="row" spacing={2}>
-      <div>
-      <Button className={styles.moneyButton} variant="outlined" endIcon={<ArrowDropDownIcon />}>
+
+      <Button
+          sx={{
+            backgroundColor: colors.blueAccent[700],
+            color: colors.grey[100],
+            fontSize: "14px",
+            fontWeight: "bold",
+            padding: "10px 20px",
+                marginLeft:'10px'
+
+          }}
+          endIcon={<ArrowDropDownIcon />}
+
+        >
+
         Newest
       </Button>
-      <Button className={styles.wizardButton} variant="contained" onClick={handleOpen} startIcon={<AddIcon />}>
+      <Button
+          sx={{
+            backgroundColor: colors.blueAccent[700],
+            color: colors.grey[100],
+            fontSize: "14px",
+            fontWeight: "bold",
+            padding: "10px 20px",
+          }}
+      onClick={handleOpen}
+       startIcon={<AddIcon />} >
          New Teacher
       </Button>
       <Modal
@@ -46,7 +72,7 @@ const TeacherButton = () => {
         handleClose={handleClose} />
        </Box>
       </Modal>
-      </div>
+
      </Stack>
     );
 }
