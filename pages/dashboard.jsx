@@ -292,9 +292,10 @@ const Dashboard = () => {
                 backgroundColor={colors.redAccent[500]}
                 p="5px 10px"
                 borderRadius="4px"
-                width='100px'
-                height='40px' 
+                width='80px'
+                height='40px'
                 alignItems='center'
+                marginRight='12px'
               >
                 ${transaction.cost}
               </Box>

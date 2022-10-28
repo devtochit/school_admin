@@ -237,7 +237,7 @@ const Dashboard = () => {
             colors={colors.grey[100]}
             p="15px"
           >
-            <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
+            <Typography color={colors.grey[100]} variant="h5" fontWeight="900" fontSize='20px'>
             Unpaid School Tution
             </Typography>
           </Box>
@@ -247,8 +247,8 @@ const Dashboard = () => {
               display="flex"
               justifyContent="space-between"
               alignItems="center"
-              borderBottom={`2px solid ${colors.primary[500]}`}
-              paddig="15px"
+              borderBottom={`4px solid ${colors.primary[500]}`}
+              padding="6px"
             >
 
               <Box
@@ -265,19 +265,24 @@ const Dashboard = () => {
                    height={60}
                    loading="eager"
                     layout="fixed"
-                    style={{ cursor: "pointer", borderRadius: "50%"}}
+                    style={{ cursor: "pointer", borderRadius: "40%",padding:'2px 2px'}}
                 />
                 <Typography color={colors.grey[100]}>
                   {transaction.user}
                 </Typography>
               </Box>
-              <Box color={colors.grey[100]}>
+              <Box
+              display='flex'
+               justifyContent="space-between"
+               alignItems="center"
+
+               color={colors.grey[100]}>
                      <Typography
                   color={colors.greenAccent[500]}
                   variant="h5"
                   fontWeight="600"
                 >
-                  {transaction.txId}
+                  {transaction.user}
                 </Typography>
 
                 </Box>
@@ -292,11 +297,12 @@ const Dashboard = () => {
                </Box>
               <Box
               backgroundColor={colors.redAccent[500]}
-                p="5px 10px"
+                p="5px 19px"
                 borderRadius="4px"
-                width='100px'
-                height='40px' 
+                width='80px'
+                height='40px'
                 alignItems='center'
+                marginRight='10px'
               >
                 ${transaction.cost}
               </Box>
