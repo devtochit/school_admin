@@ -87,7 +87,7 @@ export default function Sidebar() {
                   alt="profile-user"
                   width={100}
                   height={80}
-                  src={` https://i.ibb.co/TcKZxqP/brooke-cagle-u-HVRv-Dr7pg-unsplash.jpg`}
+                  src={ 'https://i.ibb.co/WnxQ4rs/travis.jpg'}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                   loading="eager"
                   layout="fixed"
