@@ -33,6 +33,11 @@ const TeacherButton = () => {
         Newest 
       </Button>
       <Button className={styles.wizardButton} variant="contained" onClick={handleOpen} startIcon={<AddIcon />}>
+     <Stack className={styles.buttom} direction="row" margin-left={1} spacing={2}>
+      <Button variant="outlined"  endIcon={<ArrowDropDownIcon />}color='secondary'   >
+        Newest
+      </Button>
+      <Button  variant="contained" startIcon={<AddIcon />} color='secondary'   >
         New Teacher
       </Button>
       <Modal

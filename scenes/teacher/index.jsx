@@ -7,8 +7,8 @@ import circlePics from '../../circle.png';
 import buttonPics from '../../button.png';
 import dotsPics from '../../dots.png';
 import { tokens } from "../../theme";
-import TeacherButton from "../teacherButton/index";
 import PaginationNumber from "../pagination/index";
+import TeacherContainer  from  './TeacherContainer';
 
 const TeacherPage = () => {
   const [spacing, setSpacing] = useState(2);
@@ -16,12 +16,16 @@ const TeacherPage = () => {
   const colors = tokens(theme.palette.mode);
   return (
    <>
-   <TeacherButton />
+
    <Box
     sx={{
       flexGrow: 1,
     }}
    >
+
+
+
+
      <Grid container spacing={3}>
        <Grid item xs={6} sm={3}>
          <Box
@@ -72,6 +76,7 @@ const TeacherPage = () => {
           />
          </Box>
        </Grid>
+
        <Grid item xs={6} sm={3}>
          <Box
            width="300px"
