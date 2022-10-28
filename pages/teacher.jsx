@@ -6,7 +6,7 @@ const Teacher = () => {
     return (
      <>
         <TeacherButton />
-       {/* <TeacherPage /> */}
+       <TeacherPage />
      </>
     );
 }
