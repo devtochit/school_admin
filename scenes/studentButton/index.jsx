@@ -31,8 +31,11 @@ const colors = tokens(theme.palette.mode);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false)
     return (
-     <Stack className={styles.buttom} direction="row" spacing={2}>
-      <div>
+
+
+
+     <Stack className={styles.buttom} direction="row" spacing={2} margin='20px'  >
+
       <Button
        sx={{
         backgroundColor: colors.blueAccent[700],
@@ -40,7 +43,7 @@ const colors = tokens(theme.palette.mode);
         fontSize: "14px",
         fontWeight: "bold",
         padding: "10px 20px",
-            marginLeft:'10px'
+
       }}
       endIcon={<ArrowDropDownIcon />}>
         Newest
@@ -67,8 +70,10 @@ const colors = tokens(theme.palette.mode);
         <FormField handleClose={handleClose} />
        </Box>
       </Modal>
-      </div>
+
      </Stack>
+
+
     );
 }
 

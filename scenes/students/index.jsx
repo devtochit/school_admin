@@ -58,8 +58,9 @@ const StudentData = () => {
 
   return (
     <>
-    <StudentButton />
+
     <Box m="20px">
+    <StudentButton />
       <Header
         title=" Students"
         subtitle="List of Current Student "
