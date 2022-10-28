@@ -236,7 +236,7 @@ const Dashboard = () => {
             colors={colors.grey[100]}
             p="15px"
           >
-            <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
+            <Typography color={colors.grey[100]} variant="h5" fontWeight="800">
             Unpaid School Tution
             </Typography>
           </Box>
@@ -289,9 +289,12 @@ const Dashboard = () => {
                    </Typography>
                </Box>
               <Box
-                backgroundColor={colors.greenAccent[500]}
+                backgroundColor={colors.redAccent[500]}
                 p="5px 10px"
                 borderRadius="4px"
+                width='100px'
+                height='40px' 
+                alignItems='center'
               >
                 ${transaction.cost}
               </Box>

@@ -1,5 +1,66 @@
 import { tokens } from "../theme";
 
+
+
+export const mockTeachers = [
+  {
+    img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',
+    user: "johndoe",
+    subject: "maths",
+  },
+  {
+    img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',
+    user: "jackdower",
+    subject: "science studies",
+  },
+  {
+    img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',
+    user: "aberdohnny",
+    subject: "social",
+
+  },
+  {
+    img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',
+    user: "goodmanave",
+    subject: "Art",
+
+  },
+  {
+    img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',
+    user: "stevebower",
+    subject: "maths",
+
+  },
+  {
+    img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',
+    user: "aberdohnny",
+    subject: "Algorithm",
+
+  },
+  {
+    img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',
+    user: "wootzifer",
+    subject: "English",
+  },
+  {
+    img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',
+    user: "jackdower",
+    subject: "maths",
+
+  },
+];
+
+
+
+
+
+
+
+
+
+
+
+
 export const mockUnpaid = [
   {
     img: 'https://i.ibb.co/WnxQ4rs/travis.jpg',

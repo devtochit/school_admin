@@ -8,7 +8,7 @@ import Stack from "@mui/material/Stack";
 
 const TeacherButton = () => {
     return (
-     <Stack className={styles.buttom} direction="row" spacing={2}>
+     <Stack className={styles.buttom} direction="row" margin-left={12} spacing={2}>
       <Button className={styles.moneyButton} variant="outlined" endIcon={<ArrowDropDownIcon />}>
         Newest 
       </Button>

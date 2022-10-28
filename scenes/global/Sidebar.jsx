@@ -88,7 +88,10 @@ export default function Sidebar() {
                   width={100}
                   height={80}
                   src={` https://i.ibb.co/TcKZxqP/brooke-cagle-u-HVRv-Dr7pg-unsplash.jpg`}
-                  style={{ cursor: "pointer", borderRadius: "50%" }} />
+                  style={{ cursor: "pointer", borderRadius: "50%" }}
+                  loading="eager"
+                  layout="fixed"
+                  />
               </Box>
               <Box textAlign="center">
                 <Typography
@@ -118,7 +121,7 @@ export default function Sidebar() {
               style={{
                 color: colors.grey[100], }}>
                     <Typography> Dashboard </Typography>
-               <Link href='/dashboard' >  </Link>
+               <Link href='/' >  </Link>
                </MenuItem>
 
             <Typography

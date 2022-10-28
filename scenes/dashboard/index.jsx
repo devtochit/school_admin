@@ -248,7 +248,7 @@ const Dashboard = () => {
               justifyContent="space-between"
               alignItems="center"
               borderBottom={`2px solid ${colors.primary[500]}`}
-              p="15px"
+              paddig="15px"
             >
 
               <Box
@@ -256,6 +256,7 @@ const Dashboard = () => {
                justifyContent="space-between"
                alignItems="center"
                paddingLeft='10px'
+               gap='50px'
               >
 
                 <Image
@@ -290,9 +291,12 @@ const Dashboard = () => {
                    </Typography>
                </Box>
               <Box
-                backgroundColor={colors.greenAccent[500]}
+              backgroundColor={colors.redAccent[500]}
                 p="5px 10px"
                 borderRadius="4px"
+                width='100px'
+                height='40px' 
+                alignItems='center'
               >
                 ${transaction.cost}
               </Box>
