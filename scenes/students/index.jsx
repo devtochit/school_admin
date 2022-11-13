@@ -98,7 +98,7 @@ const Student = () => {
             ),
           },
           {
-            accessorKey: 'jobTitle', //hey a simple column for once
+            accessorKey: 'class', //hey a simple column for once
             header: 'Job Title',
             size: 350,
           },
