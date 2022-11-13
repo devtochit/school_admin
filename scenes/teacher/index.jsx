@@ -15,11 +15,16 @@ import {
 } from '@mui/material';
 import { Delete, Edit } from '@mui/icons-material';
 import { schooldata, states } from '../../data/mockData';
+import { tokens } from "../../theme";
+import AddIcon from '@mui/icons-material/Add';
+
 
 const Teachers = () => {
   const [createModalOpen, setCreateModalOpen] = useState(false);
   const [tableData, setTableData] = useState(() => schooldata);
   const [validationErrors, setValidationErrors] = useState({});
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
 
   const handleCreateNewRow = (values) => {
     tableData.push(values);
@@ -172,11 +177,16 @@ const Teachers = () => {
         )}
         renderTopToolbarCustomActions={() => (
           <Button
-            color="secondary"
+          sx={{             backgroundColor: colors.blueAccent[700],
+                              color: colors.grey[100],
+                              fontSize: "14px",
+                              fontWeight: "bold",
+          }}
             onClick={() => setCreateModalOpen(true)}
             variant="contained"
           >
-            Create New Account
+            startIcon={<AddIcon />}
+            New Teacher
           </Button>
         )}
       />
@@ -232,8 +242,11 @@ export const CreateNewAccountModal = ({ open, columns, onClose, onSubmit }) => {
       </DialogContent>
       <DialogActions sx={{ p: '1.25rem' }}>
         <Button onClick={onClose}>Cancel</Button>
-        <Button color="secondary" onClick={handleSubmit} variant="contained">
-          Create New Account
+        <Button
+        sx={{ backgroundColor: colors.blueAccent[700],
+          color: colors.grey[100] }}
+        onClick={handleSubmit} variant="contained">
+          New Teacher
         </Button>
       </DialogActions>
     </Dialog>

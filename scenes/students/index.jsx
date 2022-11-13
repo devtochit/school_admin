@@ -84,7 +84,7 @@ const Student = () => {
                       : theme.palette.success.dark,
                   borderRadius: '0.25rem',
                   color: '#fff',
-                  maxWidth: '9ch',
+                  maxWidth: '11ch',
                   p: '0.25rem',
                 })}
               >
@@ -99,7 +99,7 @@ const Student = () => {
           },
           {
             accessorKey: 'class', //hey a simple column for once
-            header: 'Job Title',
+            header: 'Class',
             size: 350,
           },
           {

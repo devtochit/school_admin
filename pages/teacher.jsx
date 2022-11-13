@@ -5,7 +5,7 @@ import TeacherPage from '../scenes/teacher/index';
 const Teacher = () => {
     return (
      <>
-        <TeacherButton />
+
        <TeacherPage />
      </>
     );
