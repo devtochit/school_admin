@@ -12,10 +12,12 @@ import {
   Stack,
   TextField,
   Tooltip,
+  useTheme
 } from '@mui/material';
 import { Delete, Edit } from '@mui/icons-material';
 import { schooldata, states } from '../../data/mockData';
-import { tokens } from "../../theme";
+import { tokens, } from "../../theme";
+
 import AddIcon from '@mui/icons-material/Add';
 
 
