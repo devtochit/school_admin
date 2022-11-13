@@ -68,9 +68,9 @@ const Student = () => {
         header: 'Job Info',
         columns: [
           {
-            accessorKey: 'salary',
+            accessorKey: 'fees',
             filterVariant: 'range',
-            header: 'Salary',
+            header: 'Fees',
             size: 200,
             //custom conditional format and styling
             Cell: ({ cell }) => (
@@ -90,7 +90,7 @@ const Student = () => {
               >
                 {cell.getValue()?.toLocaleString?.('en-US', {
                   style: 'currency',
-                  currency: 'USD',
+                  currency: 'NGN',
                   minimumFractionDigits: 0,
                   maximumFractionDigits: 0,
                 })}
@@ -196,7 +196,7 @@ const Student = () => {
           <ListItemIcon>
             <Send />
           </ListItemIcon>
-          Send Email
+          Send parent Email
         </MenuItem>,
       ]}
       renderTopToolbarCustomActions={({ table }) => {
