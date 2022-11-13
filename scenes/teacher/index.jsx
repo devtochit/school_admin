@@ -179,13 +179,7 @@ const Teachers = () => {
         )}
         renderTopToolbarCustomActions={() => (
           <Button
-          sx={
 
-
-            fontSize: "14px",
-            fontWeight: "bold",
-
-          }}
            onClick={() => setCreateModalOpen(true)}
             variant="contained"
             color="secondary"
