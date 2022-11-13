@@ -1,111 +1,254 @@
-import { Box } from "@mui/material";
-import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { tokens } from "../../theme";
-import { mockDataContacts } from "../../data/mockData";
-import Header from "../../components/Header";
-import { useTheme } from "@mui/material";
-import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
-import StudentButton from '../studentButton/index';
-import TeacherButton from "../teacherButton/index";
+import React, { useMemo } from 'react';
 
-const StudentData = () => {
-  const theme = useTheme();
-  const colors = tokens(theme.palette.mode);
+//MRT Imports
+import MaterialReactTable from 'material-react-table';
 
-  const columns = [
-    { field: "name", headerName: "Name", flex: 0.5 },
-    { field: "Id", headerName: "ID" },
-    {
-      field: "date",
-      headerName: "Date",
-      flex: 1,
-      cellClassName: "name-column--cell",
-    },
-    {
-      field: "parent name",
-      headerName: " Parent Name",
-      headerAlign: "left",
-      align: "left",
-    },
-    {
-      field: "city",
-      headerName: "City",
-      flex: 1,
-    },
+//Material-UI Imports
+import {
+  Box,
+  Button,
+  ListItemIcon,
+  MenuItem,
+  Typography,
+  TextField,
+} from '@mui/material';
 
-    {
-      field: "parents phone",
-      headerName: "Phone Number",
-      flex: 1,
-    },
-    {
-      field: "email",
-      headerName: "Email",
-      flex: 1,
-    },
-    {
-      field: "address",
-      headerName: "Address",
-      flex: 1,
-    },
-    {
-      field: "zipCode",
-      headerName: "Zip Code",
-      flex: 1,
-    },
-  ];
+//Date Picker Imports
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { DatePicker } from '@mui/x-date-pickers/DatePicker';
+
+//Icons Imports
+import { AccountCircle, Send } from '@mui/icons-material';
+
+//Mock Data
+import { Teachersdata } from '../../data/mockData';
+
+const Student = () => {
+  const columns = useMemo(
+    () => [
+      {
+        id: 'employee', //id used to define `group` column
+        header: 'Employee',
+        columns: [
+          {
+            accessorFn: (row) => `${row.firstName} ${row.lastName}`, //accessorFn used to join multiple data into a single cell
+            id: 'name', //id is still required when using accessorFn instead of accessorKey
+            header: 'Name',
+            size: 250,
+            Cell: ({ cell, row }) => (
+              <Box
+                sx={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '1rem',
+                }}
+              >
+                <img
+                  alt="avatar"
+                  height={30}
+                  src={row.original.avatar}
+                  loading="lazy"
+                  style={{ borderRadius: '50%' }}
+                />
+                <Typography>{cell.getValue()}</Typography>
+              </Box>
+            ),
+          },
+          {
+            accessorKey: 'email', //accessorKey used to define `data` column. `id` gets set to accessorKey automatically
+            enableClickToCopy: true,
+            header: 'Email',
+            size: 300,
+          },
+        ],
+      },
+      {
+        id: 'id',
+        header: 'Job Info',
+        columns: [
+          {
+            accessorKey: 'salary',
+            filterVariant: 'range',
+            header: 'Salary',
+            size: 200,
+            //custom conditional format and styling
+            Cell: ({ cell }) => (
+              <Box
+                sx={(theme) => ({
+                  backgroundColor:
+                    cell.getValue() < 50_000
+                      ? theme.palette.error.dark
+                      : cell.getValue() >= 50_000 && cell.getValue() < 75_000
+                      ? theme.palette.warning.dark
+                      : theme.palette.success.dark,
+                  borderRadius: '0.25rem',
+                  color: '#fff',
+                  maxWidth: '9ch',
+                  p: '0.25rem',
+                })}
+              >
+                {cell.getValue()?.toLocaleString?.('en-US', {
+                  style: 'currency',
+                  currency: 'USD',
+                  minimumFractionDigits: 0,
+                  maximumFractionDigits: 0,
+                })}
+              </Box>
+            ),
+          },
+          {
+            accessorKey: 'jobTitle', //hey a simple column for once
+            header: 'Job Title',
+            size: 350,
+          },
+          {
+            accessorFn: (row) => new Date(row.startDate), //convert to Date for sorting and filtering
+            id: 'startDate',
+            header: 'Start Date',
+            filterFn: 'lessThanOrEqualTo',
+            sortingFn: 'datetime',
+            Cell: ({ cell }) => cell.getValue()?.toLocaleDateString(), //render Date as a string
+            Header: ({ column }) => <em>{column.columnDef.header}</em>, //custom header markup
+            //Custom Date Picker Filter from @mui/x-date-pickers
+            Filter: ({ column }) => (
+              <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <DatePicker
+                  onChange={(newValue) => {
+                    column.setFilterValue(newValue);
+                  }}
+                  renderInput={(params) => (
+                    <TextField
+                      {...params}
+                      helperText={'Filter Mode: Lesss Than'}
+                      sx={{ minWidth: '120px' }}
+                      variant="standard"
+                    />
+                  )}
+                  value={column.getFilterValue()}
+                />
+              </LocalizationProvider>
+            ),
+          },
+        ],
+      },
+    ],
+    [],
+  );
 
   return (
-    <>
+    <MaterialReactTable
+      columns={columns}
+      data={Teachersdata}
+      enableColumnFilterModes
+      enableColumnOrdering
+      enableGrouping
+      enablePinning
+      enableRowActions
+      enableRowSelection
+      initialState={{ showColumnFilters: true }}
+      positionToolbarAlertBanner="bottom"
+      renderDetailPanel={({ row }) => (
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+          }}
+        >
+          <img
+            alt="avatar"
+            height={200}
+            src={row.original.avatar}
+            loading="lazy"
+            style={{ borderRadius: '50%' }}
+          />
+          <Box sx={{ textAlign: 'center' }}>
+            <Typography variant="h4">Signature Catch Phrase:</Typography>
+            <Typography variant="h1">
+              &quot;{row.original.signatureCatchPhrase}&quot;
+            </Typography>
+          </Box>
+        </Box>
+      )}
+      renderRowActionMenuItems={({ closeMenu }) => [
+        <MenuItem
+          key={0}
+          onClick={() => {
+            // View profile logic...
+            closeMenu();
+          }}
+          sx={{ m: 0 }}
+        >
+          <ListItemIcon>
+            <AccountCircle />
+          </ListItemIcon>
+          View Profile
+        </MenuItem>,
+        <MenuItem
+          key={1}
+          onClick={() => {
+            // Send email logic...
+            closeMenu();
+          }}
+          sx={{ m: 0 }}
+        >
+          <ListItemIcon>
+            <Send />
+          </ListItemIcon>
+          Send Email
+        </MenuItem>,
+      ]}
+      renderTopToolbarCustomActions={({ table }) => {
+        const handleDeactivate = () => {
+          table.getSelectedRowModel().flatRows.map((row) => {
+            alert('deactivating ' + row.getValue('name'));
+          });
+        };
 
-    <Box m="20px">
-    <StudentButton />
-      <Header
-        title=" Students"
-        subtitle="List of Current Student "
-      />
-      <Box
-        m="40px 0 0 0"
-        height="75vh"
-        sx={{
-          "& .MuiDataGrid-root": {
-            border: "none",
-          },
-          "& .MuiDataGrid-cell": {
-            borderBottom: "none",
-          },
-          "& .name-column--cell": {
-            color: colors.greenAccent[300],
-          },
-          "& .MuiDataGrid-columnHeaders": {
-            backgroundColor: colors.blueAccent[700],
-            borderBottom: "none",
-          },
-          "& .MuiDataGrid-virtualScroller": {
-            backgroundColor: colors.primary[400],
-          },
-          "& .MuiDataGrid-footerContainer": {
-            borderTop: "none",
-            backgroundColor: colors.blueAccent[700],
-          },
-          "& .MuiCheckbox-root": {
-            color: `${colors.greenAccent[200]} !important`,
-          },
-          "& .MuiDataGrid-toolbarContainer .MuiButton-text": {
-            color: `${colors.grey[100]} !important`,
-          },
-        }}
-      >
-        <DataGrid
-          rows={mockDataContacts}
-          columns={columns}
-          components={{ Toolbar: GridToolbar }}
-        />
-      </Box>
-    </Box>
-    </>
+        const handleActivate = () => {
+          table.getSelectedRowModel().flatRows.map((row) => {
+            alert('activating ' + row.getValue('name'));
+          });
+        };
+
+        const handleContact = () => {
+          table.getSelectedRowModel().flatRows.map((row) => {
+            alert('contact ' + row.getValue('name'));
+          });
+        };
+
+        return (
+          <div style={{ display: 'flex', gap: '0.5rem' }}>
+            <Button
+              color="error"
+              disabled={table.getSelectedRowModel().flatRows.length === 0}
+              onClick={handleDeactivate}
+              variant="contained"
+            >
+              Deactivate
+            </Button>
+            <Button
+              color="success"
+              disabled={table.getSelectedRowModel().flatRows.length === 0}
+              onClick={handleActivate}
+              variant="contained"
+            >
+              Activate
+            </Button>
+            <Button
+              color="info"
+              disabled={table.getSelectedRowModel().flatRows.length === 0}
+              onClick={handleContact}
+              variant="contained"
+            >
+              Contact
+            </Button>
+          </div>
+        );
+      }}
+    />
   );
 };
 
-export default StudentData;
+export default Student;
