@@ -16,7 +16,7 @@ import {
 } from '@mui/material';
 import { Delete, Edit } from '@mui/icons-material';
 import { schooldata, states } from '../../data/mockData';
-import { tokens, } from "../../theme";
+import { tokens } from "../../theme";
 
 import AddIcon from '@mui/icons-material/Add';
 
@@ -179,12 +179,14 @@ const Teachers = () => {
         )}
         renderTopToolbarCustomActions={() => (
           <Button
-          sx={{             backgroundColor: colors.blueAccent[700],
-                              color: colors.grey[100],
-                              fontSize: "14px",
-                              fontWeight: "bold",
+          sx={{
+            backgroundColor: colors.blueAccent[700],
+            color: colors.grey[100],
+            fontSize: "14px",
+            fontWeight: "bold",
+
           }}
-            onClick={() => setCreateModalOpen(true)}
+           onClick={() => setCreateModalOpen(true)}
             variant="contained"
           >
             startIcon={<AddIcon />}
@@ -245,8 +247,11 @@ export const CreateNewAccountModal = ({ open, columns, onClose, onSubmit }) => {
       <DialogActions sx={{ p: '1.25rem' }}>
         <Button onClick={onClose}>Cancel</Button>
         <Button
-        sx={{ backgroundColor: colors.blueAccent[700],
-          color: colors.grey[100] }}
+         sx={{
+          backgroundColor: colors.blueAccent[700],
+          color: colors.grey[100],
+        }}
+
         onClick={handleSubmit} variant="contained">
           New Teacher
         </Button>
