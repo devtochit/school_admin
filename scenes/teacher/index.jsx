@@ -184,7 +184,7 @@ const Teachers = () => {
             variant="contained"
             color="secondary"
           >
-            startIcon={<AddIcon />}
+            <AddIcon />
             New Teacher
           </Button>
         )}
