@@ -179,15 +179,16 @@ const Teachers = () => {
         )}
         renderTopToolbarCustomActions={() => (
           <Button
-          sx={{
-            backgroundColor: colors.blueAccent[700],
-            color: colors.grey[100],
+          sx={
+
+
             fontSize: "14px",
             fontWeight: "bold",
 
           }}
            onClick={() => setCreateModalOpen(true)}
             variant="contained"
+            color="secondary"
           >
             startIcon={<AddIcon />}
             New Teacher
@@ -247,11 +248,7 @@ export const CreateNewAccountModal = ({ open, columns, onClose, onSubmit }) => {
       <DialogActions sx={{ p: '1.25rem' }}>
         <Button onClick={onClose}>Cancel</Button>
         <Button
-         sx={{
-          backgroundColor: colors.blueAccent[700],
-          color: colors.grey[100],
-        }}
-
+         color="secondary"
         onClick={handleSubmit} variant="contained">
           New Teacher
         </Button>
